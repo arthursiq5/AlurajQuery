@@ -9,4 +9,7 @@ campo.on('click', function(){
     let conteudo = campo.val();
     let qtdPalavras = conteudo.split(" ").length;
     $("#contador-palavras").text(qtdPalavras);
+    
+    var qtdCaracteres = conteudo.length;
+    $("#contador-caracteres").text(qtdCaracteres);
 });
