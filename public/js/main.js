@@ -8,5 +8,5 @@ let campo = $(".campo-digitacao");
 campo.on('click', function(){
     let conteudo = campo.val();
     let qtdPalavras = conteudo.split(" ").length;
-    console.log(qtdPalavras);
+    $("#contador-palavras").text(qtdPalavras);
 });
