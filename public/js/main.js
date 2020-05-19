@@ -14,3 +14,11 @@ campo.on('input', function(){
     let qtdCaracteres = conteudo.length;
     $("#contador-caracteres").text(qtdCaracteres);
 });
+
+let tempoRestante = $("#tempo-digitacao").text();
+campo.on("focus", function () {
+    setInterval(function () {
+        tempoRestante--;
+        $("#tempo-digitacao").text(tempoRestante);
+    }, 1000);
+});
