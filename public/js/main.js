@@ -1,2 +1,3 @@
-let frase = jQuery('.frase').text();
-console.log(frase);
+var frase = $(".frase").text();
+var numPalavras = frase.split(" ").length;
+console.log(numPalavras);
