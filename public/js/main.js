@@ -80,9 +80,9 @@ function inserePlacar() {
     corpoTabela.prepend(linha);
 }
 
-$(".botao-remover").click(function () {
-    console.log("Fui clicado");
-})
+$(".botao-remover").click(event, function () {
+    $(this).parent().parent().remove();
+});
 
 $(document).ready(function () {
     atualizaTamanhoFrase();
