@@ -60,6 +60,9 @@ function reiniciaJogo() {
     $("#tempo-digitacao").text(tempoInicial);
     inicializaCronometro();
     campo.toggleClass("campo-desativado");
+
+    campo.removeClass("borda-vermelha");
+    campo.removeClass("borda-verde");
 }
 $("#botao-reiniciar").click(reiniciaJogo);
 
