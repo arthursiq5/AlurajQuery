@@ -6,6 +6,8 @@ function inserePlacar() {
     linha.find(".botao-remover").click(removeLinha);
 
     corpoTabela.prepend(linha);
+
+    $(".placar").slideDown(500);
 }
 
 function removeLinha(event) {
