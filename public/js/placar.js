@@ -83,7 +83,12 @@ function sincronizaPlacar() {
     $.post("http://localhost:3000/placar", dados, function () {
         console.log("Placar sincronizado com sucesso");
         $(".tooltip").tooltipster("open");
-    });
+    })
+        .always(function () { //novo
+            setTimeout(function () {
+                $(".tooltip").tooltipster("close");
+            }, 1200);
+        })
 }
 
 function atualizaPlacar() {
