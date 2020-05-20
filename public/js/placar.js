@@ -10,7 +10,10 @@ function inserePlacar() {
 
 function removeLinha(event) {
     event.preventDefault();
-    $(this).parent().parent().fadeOut();
+    let linha = $(this).parent().parent();
+
+    linha.fadeOut();
+    linha.remove();
 }
 
 function novaLinha(usuario, palavras) {
