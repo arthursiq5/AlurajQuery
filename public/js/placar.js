@@ -39,7 +39,7 @@ function novaLinha(usuario, palavras) {
 }
 
 function mostraPlacar() {
-    $(".placar").slideToggle(600);
+    $(".placar").stop().slideToggle(600);
 }
 
 $("#botao-placar").click(mostraPlacar);
