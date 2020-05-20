@@ -71,10 +71,12 @@ function inserePlacar() {
     var corpoTabela = $(".placar").find("tbody");
     var usuario = "Seu-nome";
     var numPalavras = $("#contador-palavras").text();
+    var botaoRemover = "<a href='#'><i class='small material-icons'>delete</i></a>";
 
     var linha = "<tr>" +
         "<td>" + usuario + "</td>" +
         "<td>" + numPalavras + "</td>" +
+        "<td>" + botaoRemover + "</td>" +
         "</tr>";
 
     corpoTabela.prepend(linha);
@@ -83,6 +85,11 @@ function inserePlacar() {
 $(".botao-remover").click(event, function () {
     $(this).parent().parent().remove();
 });
+
+function novaLinha() {
+    var linha = $("<tr>");
+    var colunaUsuario = $("<td>");
+}
 
 $(document).ready(function () {
     atualizaTamanhoFrase();
