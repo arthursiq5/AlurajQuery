@@ -80,4 +80,7 @@ $(document).ready(function () {
         create: true,
         sortField: 'text'
     });
+    $(".tooltip").tooltipster({
+        trigger: "custom"
+    });
 });
