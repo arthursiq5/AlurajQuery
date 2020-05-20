@@ -7,9 +7,9 @@ campo.on("input", function () {
     var comparavel = frase.substr(0, digitado.length);
 
     if (digitado == comparavel) {
-        console.log("Está certo");
+        campo.addClass("borda-verde");
     } else {
-        console.log("Está errado");
+        campo.addClass("borda-vermelha");
     }
 });
 
