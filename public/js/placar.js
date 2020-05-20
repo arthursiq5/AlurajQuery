@@ -32,3 +32,9 @@ function novaLinha(usuario, palavras) {
 
     return linha;
 }
+
+function mostraPlacar() {
+    $(".placar").toggle();
+}
+
+$("#botao-placar").click(mostraPlacar);
