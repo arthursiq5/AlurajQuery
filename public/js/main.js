@@ -77,7 +77,7 @@ function inserePlacar() {
         "<td>" + numPalavras + "</td>" +
         "</tr>";
 
-    corpoTabela.append(linha);
+    corpoTabela.prepend(linha);
 }
 
 
