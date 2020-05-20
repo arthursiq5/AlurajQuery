@@ -1,5 +1,17 @@
 var tempoInicial = $("#tempo-digitacao").text();
 var campo = $(".campo-digitacao");
+var frase = $(".frase").text();
+
+campo.on("input", function () {
+    var digitado = campo.val();
+    var comparavel = frase.substr(0, digitado.length);
+
+    if (digitado == comparavel) {
+        console.log("Está certo");
+    } else {
+        console.log("Está errado");
+    }
+});
 
 function atualizaTamanhoFrase(){
     let frase = $(".frase").text();
