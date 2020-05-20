@@ -73,4 +73,6 @@ $(document).ready(function () {
     inicializaCronometro();
     inicializaMarcadores();
     $("#botao-reiniciar").click(reiniciaJogo);
+
+    atualizaPlacar();
 });
