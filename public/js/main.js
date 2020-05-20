@@ -1,3 +1,6 @@
+var tempoInicial = $("#tempo-digitacao").text();
+var campo = $(".campo-digitacao");
+
 function atualizaTamanhoFrase(){
     let frase = $(".frase").text();
     let numPalavras = frase.split(" ").length;
@@ -38,9 +41,16 @@ function reiniciaJogo() {
     $("#contador-palavras").text("0");
     $("#contador-caracteres").text("0");
     $("#tempo-digitacao").text(tempoInicial);
+    inicializaCronometro();
 }
-
-let tempoInicial = $("#tempo-digitacao").text();
-
-
 $("#botao-reiniciar").click(reiniciaJogo);
+
+
+
+
+$(document).ready(function () {
+    atualizaTamanhoFrase();
+    inicializaContadores();
+    inicializaCronometro();
+    $("#botao-reiniciar").click(reiniciaJogo);
+});
