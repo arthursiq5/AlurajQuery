@@ -34,7 +34,7 @@ function novaLinha(usuario, palavras) {
 }
 
 function mostraPlacar() {
-    $(".placar").toggle();
+    $(".placar").slideToggle(600);
 }
 
 $("#botao-placar").click(mostraPlacar);
