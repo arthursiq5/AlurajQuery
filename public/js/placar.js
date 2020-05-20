@@ -84,11 +84,14 @@ function sincronizaPlacar() {
         console.log("Placar sincronizado com sucesso");
         $(".tooltip").tooltipster("open");
     })
-        .always(function () { //novo
-            setTimeout(function () {
-                $(".tooltip").tooltipster("close");
-            }, 1200);
-        })
+    .fail(function () {
+        $(".tooltip").tooltipster("open").tooltipster("content", "Falha ao sincronizar");
+    })
+    .always(function () { //novo
+        setTimeout(function () {
+            $(".tooltip").tooltipster("close");
+        }, 1200);
+    })
 }
 
 function atualizaPlacar() {
